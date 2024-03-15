@@ -17,10 +17,10 @@ void main() {
     }
   ];
   displayFruitDetails(fruits);
-  applyPriceDiscount(fruits, 10.0);
+  applyPriceDiscount(fruits: fruits, discount: 10.0);
 }
 
-void applyPriceDiscount(List fruits, double discount) {
+void applyPriceDiscount({required List fruits, required double discount}) {
   print("Fruit Details After Applying $discount% Discount:");
   for(var fruit in fruits) {
     double actualAmount = fruit['price'];
